@@ -1,5 +1,5 @@
 
-define('app/subA',[], function(subC) {
+define('app/subA',[], function() {
     console.log('subA loaded...');
 });
 

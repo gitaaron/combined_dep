@@ -1,3 +1,3 @@
-define([], function(subC) {
+define([], function() {
     console.log('subA loaded...');
 });
