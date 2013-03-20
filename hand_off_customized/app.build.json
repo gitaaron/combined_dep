@@ -6,7 +6,7 @@
             name:'app'
         }
     ],
-    dir:'../hand_off',
+    dir:'../hand_off_customized_final',
     removeCombined:true,
     optimize:'none' 
 
