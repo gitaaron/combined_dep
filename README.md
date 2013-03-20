@@ -12,4 +12,4 @@ Lets say I have a project
                 * subC.js
             * app.js
 
-Lets say app defines subA as a dependency.  subA defines subB and subC as dependencies.  Will requirejs complain if subC is include in app?  Will the optimizer complained?
+Lets say app depends on subA.  subA and subB both depend on subC.  Will requirejs complain with a 404 if subC is included already in subA as a module?  Will the optimizer complain?
