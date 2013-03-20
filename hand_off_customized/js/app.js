@@ -3,8 +3,8 @@ define('app/subA',[], function() {
     console.log('subA loaded...');
 });
 
-require(['app/subA'], function(subA) {
-    alert('required app with subA as a dependencies...');
+require(['app/subA', 'custom_app/subB'], function(subA, subB) {
+    alert('required app with subA and subB as a dependencies...');
 });
 
 define("app", function(){});
