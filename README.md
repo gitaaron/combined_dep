@@ -27,3 +27,8 @@ They update the project to include their 'custom_app' directory and update app t
 
 
 Will requirejs complain with a 404 if subA is already included in app as a module?  Will the optimizer complain?
+
+
+# Results
+
+This workflow works because app is loaded first.  
