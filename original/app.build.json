@@ -1,0 +1,13 @@
+({
+    appDir:'.',
+    baseUrl:'js',
+    modules:[
+        {
+            name:'app'
+        }
+    ],
+    dir:'../hand_off',
+    removeCombined:true,
+    optimize:'none' 
+
+})
