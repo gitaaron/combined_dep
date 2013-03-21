@@ -3,7 +3,9 @@
 This is a spike to think about how to solve the problem of having third party modules depending on a module that is already minified in a base project.
 
 Lets say I create a project :
-    * www/
+
+
+    www/
         * index.html
         * js/
             * app/
@@ -15,7 +17,9 @@ Lets say I create a project :
 where app depends on subA.
 
 I then hand the project to another developer that proceeds to add their submodule :
-    * www/
+
+
+    www/
         * index.html
         * js/
 
