@@ -3,7 +3,7 @@
 This is a spike to think about how to solve the problem of having third party modules depending on a module that is already minified in a base project.
 
 Lets say I create a project :
-    www/
+    * www/
         * index.html
         * js/
             * app/
@@ -12,10 +12,10 @@ Lets say I create a project :
 
 
 
-Lets say app depends on subA.
+where app depends on subA.
 
 I then hand the project to another developer that proceeds to add their submodule :
-    www/
+    * www/
         * index.html
         * js/
 
@@ -31,4 +31,15 @@ Will requirejs complain with a 404 if subA is already included in app as a modul
 
 # Results
 
-This workflow works because app is loaded first.  
+This workflow works because app is loaded first. So we should be fine as long as we don't end up with a project structure similar to one found under not_works :
+
+
+    www/
+        * index.html
+        * js/
+            * app/
+                * subA.js (includes subC)
+            * custom_app/
+                * subB.js (depends on subC)
+            * app.js 
+
