@@ -2,7 +2,7 @@
 
 This is a spike to think about how to solve the problem of having third party modules depending on a module that is already minified in a base project.
 
-Lets say I create a project :
+Lets say I create a project (original):
 
 
     www/
@@ -16,8 +16,15 @@ Lets say I create a project :
 
 where app depends on subA.
 
-I then hand the project to another developer that proceeds to add their submodule :
+I then run the optimizer (outputs to hand_off):
 
+    node build/r.js -o original/app.build.json
+
+and hand the project off to another developer that proceeds to add their submodule :
+
+    cp -R hand_off hand_off_customized
+
+you can see the result of their work under hand_off_customized :
 
     www/
         * index.html
@@ -46,4 +53,5 @@ This workflow works because app is loaded first. So we should be fine as long as
             * custom_app/
                 * subB.js (depends on subC)
             * app.js 
+
 
